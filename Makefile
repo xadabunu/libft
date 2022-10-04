@@ -6,14 +6,13 @@
 #    By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 12:17:15 by xadabunu          #+#    #+#              #
-#    Updated: 2022/09/23 12:17:19 by xadabunu         ###   ########.fr        #
+#    Updated: 2022/10/04 14:40:04 by xadabunu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 SRCS	=	ft_bzero.c \
 			ft_memset.c \
 			ft_memcpy.c \
-			ft_memccpy.c \
 			ft_memchr.c \
 			ft_memcmp.c \
 			ft_memmove.c \
@@ -25,16 +24,11 @@ SRCS	=	ft_bzero.c \
 			ft_isprint.c \
 			ft_strlen.c \
 			ft_strdup.c \
-			ft_strcpy.c \
-			ft_strncpy.c \
-			ft_strcat.c \
-			ft_strncat.c \
+			ft_strlcpy.c \
 			ft_strlcat.c \
 			ft_strchr.c \
 			ft_strrchr.c \
-			ft_strstr.c \
 			ft_strnstr.c \
-			ft_strcmp.c \
 			ft_strncmp.c \
 			ft_toupper.c \
 			ft_tolower.c \
