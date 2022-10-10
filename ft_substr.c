@@ -23,6 +23,6 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	if (nb < len)
 		len = nb;
 	str = (char *)malloc((len + 1) * sizeof(*str));
-	ft_strlcpy(str, s + start, len);
+	ft_strlcpy(str, s + start, len + 1);
 	return (str);
 }
