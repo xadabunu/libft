@@ -17,9 +17,12 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 	char	*str;
 	size_t	nb;
 
+	if (!s || start >= ft_strlen(s))
+		return (NULL);
 	nb = ft_strlen(s) - start;
 	if (nb < len)
 		len = nb;
-	str = (char *)malloc(len + sizeof(*str));
-	return (ft_strncpy(str, s + start, len));
+	str = (char *)malloc((len + 1) * sizeof(*str));
+	ft_strlcpy(str, s + start, len);
+	return (str);
 }
