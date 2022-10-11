@@ -10,17 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-static int	ft_islower(unsigned char c)
-{
-	return (c >= 'a' && c <= 'z');
-}
-
-static int	ft_isupper(unsigned char c)
-{
-	return (c >= 'A' && c <= 'Z');
-}
-
 int	ft_isalpha(unsigned char c)
 {
-	return (ft_isupper(c) || ft_islower(c));
+	return ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'));
 }
