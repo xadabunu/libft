@@ -33,6 +33,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 			++i;
 			++j;
 	}
-		dest[j] = 0;
+	dest[j] = 0;
 	return (destlen + srclen);
 }
