@@ -10,7 +10,7 @@
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft__isascii(unsigned char c)
+int	ft_isascii(unsigned char c)
 {
 	return (c < 128);
 }
