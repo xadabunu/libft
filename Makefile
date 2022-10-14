@@ -6,7 +6,7 @@
 #    By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 12:17:15 by xadabunu          #+#    #+#              #
-#    Updated: 2022/10/14 20:44:33 by xadabunu         ###   ########.fr        #
+#    Updated: 2022/10/14 22:46:12 by xadabunu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -61,11 +61,11 @@ O_BONUS	=	${BONUS:.c=.o}
 
 NAME	=	libft.a
 
-CC	=	gcc
+CC	=	@gcc
 
 CFLAGS	=	-Wall -Wextra -Werror
 
-RM	=	rm -f
+RM	=	@rm -f
 
 .c.o	:
 		${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
