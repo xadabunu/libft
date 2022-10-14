@@ -6,7 +6,7 @@
 #    By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/09/23 12:17:15 by xadabunu          #+#    #+#              #
-#    Updated: 2022/10/12 23:12:27 by xadabunu         ###   ########.fr        #
+#    Updated: 2022/10/14 20:44:33 by xadabunu         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -45,7 +45,19 @@ SRCS	=	ft_bzero.c \
 		ft_putendl_fd.c \
 		ft_putnbr_fd.c
 
+BONUS	=	ft_lstnew.c \
+		ft_lstadd_front.c \
+		ft_lstsize.c \
+		ft_lstlast.c \
+		ft_lstadd_back.c \
+		ft_lstdelone.c \
+		ft_lstclear.c \
+		ft_lstiter.c \
+		ft_lstmap.c
+
 OBJS	=	${SRCS:.c=.o}
+
+O_BONUS	=	${BONUS:.c=.o}
 
 NAME	=	libft.a
 
@@ -61,14 +73,17 @@ RM	=	rm -f
 ${NAME}	:	${OBJS}
 		@ar rcs ${NAME} ${OBJS}
 
+bonus	:	${O_BONUS}
+		@ar rcs ${NAME} ${O_BONUS}
+
 all	:	${NAME}
 
 clean	:
-		${RM} ${OBJS}
+		${RM} ${OBJS} ${O_BONUS}
 
 fclean	:	clean
 		${RM} ${NAME}
 
 re	:	fclean all
 
-.PHONY	:	all clean fclean re
+.PHONY	:	all clean fclean re bonus
