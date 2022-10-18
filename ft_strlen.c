@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 12:03:22 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/03 17:27:57 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:09:19 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,6 @@ size_t	ft_strlen(const char *str)
 {
 	size_t	i;
 
-	if (!str)
-		return (0);
 	i = 0;
 	while (str[i])
 		++i;

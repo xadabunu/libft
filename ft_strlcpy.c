@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/10/04 00:23:48 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/04 15:33:29 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:09:40 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ size_t	ft_strlcpy(char *dest, const char *src, size_t destsize)
 	size_t	len;
 
 	len = ft_strlen(src);
-	if (destsize < 1 || !dest || !src)
+	if (destsize < 1)
 		return (len);
 	i = 0;
 	while (i < destsize - 1 && src[i])

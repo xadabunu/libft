@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 12:03:04 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/03 16:13:45 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:09:50 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,8 +19,6 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size)
 	size_t	i;
 	size_t	j;
 
-	if (!dest || !src)
-		return (0);
 	srclen = ft_strlen(src);
 	destlen = ft_strlen(dest);
 	if (size == 0 || destlen >= size)

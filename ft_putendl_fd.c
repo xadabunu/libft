@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/24 22:38:58 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/03 16:06:33 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:06:35 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,5 +17,5 @@ void	ft_putendl_fd(char *s, int fd)
 	if (!s)
 		return ;
 	ft_putstr_fd(s, fd);
-	ft_putchar_fd(0, fd);
+	ft_putchar_fd('\n', fd);
 }

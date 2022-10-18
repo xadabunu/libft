@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 11:12:53 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/03 16:12:16 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/18 15:10:38 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@ char	*ft_strchr(const char *s, int c)
 {
 	int	i;
 
-	if (!s)
-		return (0);
 	c = c % 256;
 	i = 0;
 	while (s[i])
