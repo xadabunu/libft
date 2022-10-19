@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 12:16:51 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/04 15:05:18 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:46:16 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,7 +43,7 @@ size_t	ft_strlcat(char *dest, const char *src, size_t size);
 char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 char	*ft_strnstr(const char *str, char *to_find, size_t len);
-int		ft_strncmp(char *s1, char *s2, unsigned int n);
+int		ft_strncmp(char *s1, char *s2, size_t n);
 
 int		ft_tolower(int c);
 int		ft_toupper(int c);

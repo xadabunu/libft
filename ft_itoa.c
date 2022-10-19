@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 23:31:33 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/03 15:53:22 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:05:29 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,7 +29,7 @@ static unsigned int	ft_getlen(unsigned int n)
 char	*ft_itoa(int n)
 {
 	unsigned int	uns_n;
-	int				len;
+	unsigned int	len;
 	char			*str;
 
 	len = 0;

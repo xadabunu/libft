@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/27 12:57:28 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/03 15:54:07 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/19 14:20:01 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,5 +15,5 @@
 void	ft_lstadd_front(t_list **lst, t_list *new)
 {
 	new->next = *lst;
-	lst = &new;
+	*lst = new;
 }
