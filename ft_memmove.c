@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 11:08:44 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/03 16:05:18 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/28 12:39:54 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,16 +16,18 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 {
 	char	*s_dest;
 	char	*s_src;
-	char	buffer;
 
-	if (!src || !dest)
-		return (NULL);
 	s_src = (char *)src;
 	s_dest = (char *)dest;
-	while (n-- > 0)
+	if (src > dest)
 	{
-		buffer = s_src[n];
-		s_dest[n] = buffer;
+		while (n-- > 0)
+			*s_dest++ = *s_src++;
+	}
+	else
+	{
+		while (n-- > 0)
+			s_dest[n] = s_src[n];
 	}
 	return (dest);
 }

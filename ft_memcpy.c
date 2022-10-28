@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 11:08:28 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/03 15:58:23 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/28 11:46:28 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,8 +18,8 @@ void	*ft_memcpy(void *dest, const void *src, size_t n)
 	char	*s_src;
 	size_t	i;
 
-	if (!dest || !src)
-		return (NULL);
+	if (n == 0)
+		return (dest);
 	s_dest = (char *)dest;
 	s_src = (char *)src;
 	i = 0;
