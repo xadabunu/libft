@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 20:17:35 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/03 16:15:05 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/28 14:39:25 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -53,9 +53,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	int		j;
 
 	if (!s1 || !set)
-		return (NULL);
+		return ((char *)s1);
 	len = ft_trimlen(s1, set);
-	res = (char *) malloc(len + 1);
+	res = malloc(sizeof(*res) * (len + 1));
 	if (!res)
 		return (NULL);
 	i = 0;
