@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 12:05:20 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/10/28 14:17:14 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/28 15:46:09 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,10 @@ char	*ft_substr(char const *s, unsigned int start, size_t len)
 
 	if (!s)
 		return (NULL);
-	nb = ft_strlen(s) - start;
+	if (start >= ft_strlen(s))
+		nb = 0;
+	else
+		nb = ft_strlen(s) - start;
 	if (nb < len)
 		len = nb;
 	str = malloc((len + 1) * sizeof(*str));

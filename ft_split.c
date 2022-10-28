@@ -6,7 +6,7 @@
 /*   By: xadabunu <xadabunu@student.s19.be>         +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/09/23 11:09:28 by xadabunu          #+#    #+#             */
-/*   Updated: 2022/09/23 11:09:38 by xadabunu         ###   ########.fr       */
+/*   Updated: 2022/10/28 16:19:35 by xadabunu         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,18 +40,17 @@ static char	**ft_assign(const char *str, char **tab, int size, char c)
 
 	n = 0;
 	i = 0;
-	j = 0;
-	while (n < size && str[i])
+	while (n < size)
 	{
 		if (str[i] != c)
 		{
+			j = 0;
 			while (str[i] && str[i] != c)
 				tab[n][j++] = str[i++];
 			tab[n][j] = '\0';
-			++n;
-			j = 0;
 		}
 		++i;
+		++n;
 	}
 	tab[n] = 0;
 	return (tab);
@@ -87,19 +86,18 @@ char	**ft_split(const char *s, char c)
 	int		len;
 	int		pos;
 
-	if (!s || !c)
+	if (!s)
 		return (0);
 	size = str_count(s, c);
-	tab = malloc(sizeof (char *) * (size + 1));
+	tab = malloc(sizeof(char *) * (size + 1));
 	if (!tab)
 		return (0);
 	i = 0;
-	len = 0;
 	pos = 0;
 	while (i < size)
 	{
 		len = ft_splitlen(s, c, &pos);
-		tab[i] = malloc(sizeof (char) * (1 + len));
+		tab[i] = malloc(sizeof(char) * (1 + len));
 		if (!tab[i])
 			return (ft_free(tab));
 		++i;
