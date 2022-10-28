@@ -26,6 +26,7 @@ static int	str_count(const char *str, char c)
 			++ctr;
 			while (str[i] && str[i] != c)
 				++i;
+			--i;
 		}
 		++i;
 	}
