@@ -21,5 +21,4 @@ void	ft_bzero(void *s, size_t n)
 	i = 0;
 	while (i < n)
 		ss[i++] = 0;
-
 }
