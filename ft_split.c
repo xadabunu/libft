@@ -49,9 +49,9 @@ static char	**ft_assign(const char *str, char **tab, int size, char c)
 			while (str[i] && str[i] != c)
 				tab[n][j++] = str[i++];
 			tab[n][j] = '\0';
+			++n;
 		}
 		++i;
-		++n;
 	}
 	tab[n] = 0;
 	return (tab);

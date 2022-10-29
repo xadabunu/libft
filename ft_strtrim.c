@@ -26,7 +26,7 @@ static int	ft_isinset(char c, char const *set)
 	return (0);
 }
 
-static int	ft_trimlen(char const *str, char const *set)
+/*static int	ft_trimlen(char const *str, char const *set)
 {
 	int	i;
 	int	ctr;
@@ -40,30 +40,21 @@ static int	ft_trimlen(char const *str, char const *set)
 		ctr++;
 		i++;
 	}
-	while (ft_isinset(str[--i], set))
+	while (ctr > 0 && ft_isinset(str[--i], set))
 		--ctr;
 	return (ctr);
-}
+}*/
 
 char	*ft_strtrim(char const *s1, char const *set)
 {
-	char	*res;
-	int		len;
-	int		i;
-	int		j;
+	size_t			len;
+	unsigned int	pos;
 
-	if (!s1 || !set)
-		return ((char *)s1);
-	len = ft_trimlen(s1, set);
-	res = malloc(sizeof(*res) * (len + 1));
-	if (!res)
-		return (NULL);
-	i = 0;
-	j = 0;
-	while (ft_isinset(s1[j], set))
-		++j;
-	while (i < len)
-		res[i++] = s1[j++];
-	res[i] = 0;
-	return (res);
+	pos = 0;
+	while (ft_isinset(s1[pos], set))
+		++pos;
+	len = ft_strlen(s1 + pos);
+	while (ft_isinset(s1[pos + len - 1], set))
+		--len;
+	return (ft_substr(s1, pos, len));
 }
