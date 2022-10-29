@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static void ft_subputnbr_fd(unsigned int n, int fd)
+static void	ft_subputnbr_fd(unsigned int n, int fd)
 {
 	if (n > 9)
 		ft_subputnbr_fd(n / 10, fd);
@@ -22,6 +22,7 @@ static void ft_subputnbr_fd(unsigned int n, int fd)
 void	ft_putnbr_fd(int n, int fd)
 {
 	unsigned int	uns_n;
+	
 	if (n < 0)
 	{
 		ft_putchar_fd('-', fd);
