@@ -20,26 +20,27 @@ static int	ft_isspace(const char c)
 
 int	ft_atoi(const char *nptr)
 {
-	int	i;
-	int	res;
-	int	sign;
+	unsigned int	i;
+	long			res;
+	int				sign;
+	long			tmp;
 
-	res = 0;
-	if (!nptr)
-		return (res);
 	i = 0;
 	while (ft_isspace(nptr[i]))
 		++i;
 	sign = 1;
 	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (nptr[i] == '-')
+		if (nptr[i++] == '-')
 			sign = -1;
-		++i;
 	}
-	while (nptr[i] && ft_isdigit(nptr[i]))
+	res = 0;
+	while (nptr[i] && (nptr[i] >= '0' && nptr[i] <= '9'))
 	{
+		tmp = res;
 		res = res * 10 + nptr[i] - '0';
+		if (tmp > res)
+			return (-1 * (sign == 1));
 		++i;
 	}
 	return (sign * res);
