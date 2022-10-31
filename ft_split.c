@@ -76,6 +76,7 @@ static char	**ft_free(char **tab)
 	i = 0;
 	while (tab[i] != NULL)
 		free(tab[i]);
+	free(tab);
 	return (NULL);
 }
 
