@@ -31,7 +31,9 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t			len;
 	unsigned int	pos;
 
-	if (!s1 || !set)
+	if (!s1)
+		return (NULL);
+	if (!set)
 		return ((char *)s1);
 	pos = 0;
 	while (ft_isinset(s1[pos], set))
