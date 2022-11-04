@@ -25,6 +25,8 @@ int	ft_atoi(const char *nptr)
 	int				sign;
 	long			tmp;
 
+	if (!nptr)
+		return (0);
 	i = 0;
 	while (ft_isspace(nptr[i]))
 		++i;
